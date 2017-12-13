@@ -9,6 +9,6 @@
 ### Delete all docker images
 
  ```bash
- docker docker ps --no-trunc -aq`
+ docker rmi -f $(docker images -q)
 ```
 
