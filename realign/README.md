@@ -1,6 +1,4 @@
-# Variant Calling
-
-## Realignment
+#  Realignment
 
 I used information from [this article](https://software.broadinstitute.org/gatk/documentation/article.php?id=7156). 
 
@@ -13,20 +11,20 @@ git clone https://github.com/broadinstitute/picard.git
 cd picard
 ./gradlew shadowJar
 ```
-GATK:
+GATK 3.7:
 
  ```bash
 wget https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.7-0-gcfedb67
 ```
 
-### Workflow
+### Realignment Workflow
 
 Execute first two steps only in case your BAM is malformed:
 
 * Create Sequence Dictionary
 
  ```java
-java -jar picard/build/libs/picard.jar  CreateSequenceDictionary R=<name.fasta> O= name.dict
+java -jar picard/build/libs/picard.jar  CreateSequenceDictionary R=<name.fasta> O=<name.dict>
 ```
 * Add or Replace Read Groups
  ```java
