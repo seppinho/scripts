@@ -1,0 +1,7 @@
+## Download fastq file data from SRA
+
+## Download Toolkit
+https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/
+
+## Command
+`sratoolkit.2.8.2-1-ubuntu64/bin/sam-dump ERR1955528 --aligned-region MT --fastq --gzip > test.fastq.gz`
