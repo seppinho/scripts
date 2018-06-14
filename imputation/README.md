@@ -1,7 +1,7 @@
 
 # Imputation Scripts
 
-This script creates a chr23 GWAS vcf file from GWAS plink files. Overall goal is to impute it with Michigan Imputation Server. [Plink2](https://www.cog-genomics.org/plink2) needs to be installed on your local PC.
+This script creates a chr23 GWAS VCF file from PLINK binary files. Overall goal is to impute it with Michigan Imputation Server. Please install [Plink2](https://www.cog-genomics.org/plink2) before you start.
 
 ## Get all required data and tools
      wget http://www.well.ox.ac.uk/~wrayner/tools/HRC-1000G-check-bim-v4.2.9.zip
@@ -14,7 +14,8 @@ This script creates a chr23 GWAS vcf file from GWAS plink files. Overall goal is
  ## Pipeline 
  
  ### Extract chr23 from overall binary file set (bed, bim, fam)
- Info: Specify GWAS-File without ending bed/bim/fam
+ Info: Always specify GWAS-File without ending bed/bim/fam when using PLINK. 
+ 
      plink --bfile <GWAS-file> --chr 23 --out <GWAS-file-out> --make-bed
  ### Optional filter step    
      plink --bfile <input-out> --maf 0.01 --hwe 1E-5 --geno 0.04  --out  <input-out-filtered> --make-bed
