@@ -1,6 +1,6 @@
 
 # Working with genotyping data
-Genotyping data can be exported from e.g. Illumina Genome Studio as ped and map files (pedigree + genotype). This files can be converted to PLINK binary files and further converted to VCF. 
+Genotyping data can be exported from e.g. Illumina Genome Studio as ped and map files (pedigree + genotype). If you cant export your data form Genome Studio, please install the [plugin](https://support.illumina.com/content/dam/illumina-support/documents/downloads/software/genomestudio/plink-input-report-plugin-v2-1-4.zip) first. This files can be converted to PLINK binary files and further converted to VCF. 
 
 ## Convert files to binary PLINK files
 
