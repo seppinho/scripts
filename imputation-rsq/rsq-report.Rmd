@@ -1,0 +1,28 @@
+---
+title: "Compare Rsq of 2 files"
+author: "Sebastian"
+date: "January 24, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+setwd("/data/minimac-eval/1000g");
+```
+
+## 1000G Compare
+
+
+```{r 1000g}
+# execute on commandline to format minimac3 output: 
+# zcat chr20.info.gz | awk '{print $0, "\t" $1 ":" $2 ":" $3}' > chr20_altered.info; bgzip chr20_altered.info
+minimac3 <- read.table("m3_chr20_altered.info.gz", header=TRUE, sep="\t")
+minimac4 <- read.table("m4_chr20.info.gz", header=TRUE, sep="\t")
+merged <- merge(minimac3, minimac4, by.x="SNP.REF.0..ALT.1.", by.y="SNP")
+merged$Rsq.x <- as.numeric(as.character( merged$Rsq.x ))
+merged$Rsq.y <- as.numeric(as.character( merged$Rsq.y ))
+p <- ggplot(merged, aes(Rsq.x, Rsq.y))
+p + geom_point()
+
+```
