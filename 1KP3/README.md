@@ -12,7 +12,8 @@ This script currently downloads the lpa region (6:161033785-161066618) of all fi
 * Download samples list
 
  ```bash
- wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel -O samples.txt
+ wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel -O samples-complete.txt
+ cut -f1 samples-complete.txt > samples.txt
 ```
 
 * Start download process (script by @haansi)
