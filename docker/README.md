@@ -1,5 +1,11 @@
 ## Docker
 
+### Remove all unused containers, networks and images (both dangling and unreferenced)
+
+```bash
+docker system prune
+```
+
 ### Delete all docker containers
  
  ```bash
