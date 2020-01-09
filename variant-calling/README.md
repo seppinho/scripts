@@ -1,4 +1,4 @@
-#  Variant Calling
+#  Variant Calling with GATK
 
 Let's start from [this article](http://people.duke.edu/~ccc14/duke-hts-2017/Statistics/08032017/GATK-pipeline-sample.html). 
 
