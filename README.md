@@ -10,3 +10,14 @@ Bash scripts and other stuff I always google
 |[imputation](https://github.com/seppinho/scripts/blob/master/imputation/README.md)|prepare data for Michigan Imputation Server|Seb|
 |[chip-data](https://github.com/seppinho/scripts/blob/master/chip/README.md)|create vcf files from Illumina data|Seb|
 |[1GP3](https://github.com/seppinho/scripts/blob/master/1KP3/README.md)|download 1000 Genomes lpa data|Hansi|
+
+
+# Extract zips with passwords (e.g. from MIS)
+Save script in same folder as zips and run with ./script.sh <PWD>
+
+```bash
+#!/bin/bash
+for FILE in *.zip;
+do 7z x -p"$1" $FILE;
+done
+```
