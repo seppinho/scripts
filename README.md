@@ -21,3 +21,14 @@ for FILE in *.zip;
 do 7z x -p"$1" $FILE;
 done
 ```
+# Delete all Docker containers
+
+```bash  
+ docker rm -vf $(docker ps -a -q)
+```
+  
+# Delete all Docker images
+
+```bash  
+docker rmi -f $(docker images -a -q)
+```
