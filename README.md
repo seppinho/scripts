@@ -12,7 +12,7 @@ Bash scripts and other stuff I always google
 |[1GP3](https://github.com/seppinho/scripts/blob/master/1KP3/README.md)|download 1000 Genomes lpa data|Hansi|
 
 
-# Extract zips with passwords (e.g. from MIS)
+## Extract zips with passwords (e.g. from MIS)
 Save script in same folder as zips and run with ./script.sh <PWD>
 
 ```bash
@@ -21,14 +21,17 @@ for FILE in *.zip;
 do 7z x -p"$1" $FILE;
 done
 ```
-# Delete all Docker containers
+
+## Delete all Docker containers
 
 ```bash  
  docker rm -vf $(docker ps -a -q)
 ```
   
-# Delete all Docker images
+## Replace SPACE with TAB
 
 ```bash  
-docker rmi -f $(docker images -a -q)
+sed -e 's/ /\t/g' <in> > <out>
 ```
+ 
+ 
