@@ -27,7 +27,11 @@ done
 ```bash  
  docker rm -vf $(docker ps -a -q)
 ```
-  
+ ## Delete all Docker images
+ 
+```bash 
+  docker rmi -f $(docker images -a -q)
+```  
 ## Replace SPACE with TAB
 
 ```bash  
